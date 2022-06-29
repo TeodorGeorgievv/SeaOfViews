@@ -1,0 +1,47 @@
+.header {
+  width: 80%;
+  height: 5rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  position: fixed;
+  z-index: 2;
+  color: #fff;
+}
+
+.parallax {
+  background-image: url("https://images8.alphacoders.com/721/721618.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.header li {
+  margin: 0 1rem;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #A9A9A9;
+  font-weight: bold;
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  color: black;
+}

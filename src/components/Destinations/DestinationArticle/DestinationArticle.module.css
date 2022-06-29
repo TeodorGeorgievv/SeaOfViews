@@ -1,0 +1,32 @@
+.articleWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20%;
+}
+
+.imageWrapper {
+  min-width: 30rem;
+  width: 100rem;
+  overflow: hidden;
+}
+
+.articleWrapper figure img {
+  width: 30rem;
+  height: 20rem;
+  transform: scale(1);
+  transition: 0.6s ease-in-out;
+}
+
+.articleWrapper figure:hover img {
+  transform: scale(1.1);
+}
+
+.articleWrapper span {
+  font-family: "EB Goromond";
+  font-size: 1.5rem;
+}
+
+.articleWrapper p {
+  display: flex;
+  text-align: left;
+}

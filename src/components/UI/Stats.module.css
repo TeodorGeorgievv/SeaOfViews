@@ -1,0 +1,46 @@
+.heading {
+  margin: 0 auto;
+}
+
+.image {
+  max-width: 25rem;
+  min-width: 15rem;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: #fff;
+}
+
+.image img {
+  padding: 1rem;
+  width: 20%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.content {
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content h3 {
+  margin: -2px;
+  font-size: 1.55rem;
+  color: #2c292b;
+}
+
+.content p {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 19rem));
+  gap: 2rem;
+  justify-content: center;
+}

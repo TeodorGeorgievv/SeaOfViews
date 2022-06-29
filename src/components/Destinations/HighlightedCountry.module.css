@@ -1,0 +1,86 @@
+.country {
+  color: white;
+  z-index: 1;
+  margin-top: -14rem;
+  position: absolute; 
+  left: 50%; 
+}
+
+.innerDiv {
+  position: relative;
+  left: -50%;
+}
+
+.country img {
+  border-radius: 7px;
+  width: 75%;
+  max-width: 75%;
+  height: 30em;
+}
+
+.country h1 {
+  font-size: 2rem;
+  font-family: "Jost", sans-serif;
+}
+
+.country p {
+  font-size: 1.5rem;
+  text-align: right;
+  color: #a1e0e0;
+}
+
+.description {
+  width: 65%;
+  margin: 0 auto;
+  padding: 7rem;
+}
+
+.description h3 {
+  font-family: 'EB Goromond', serif;
+  display: flex;
+  justify-content: center;
+  line-height: 26px;
+
+}
+
+.description p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 26px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.articleWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20%;
+}
+
+.imageWrapper {
+  min-width: 30rem;
+  width: 100rem;
+  overflow: hidden;
+}
+
+.articleWrapper figure img {
+  width: 30rem;
+  height: 20rem;
+  transform: scale(1);
+  transition: .6s ease-in-out;
+}
+
+.articleWrapper figure:hover img {
+  transform: scale(1.1);
+}
+
+.articleWrapper span {
+  font-family: 'EB Goromond';
+  font-size: 1.5rem;
+}
+
+.articleWrapper p {
+  display: flex;
+  text-align: left;
+}

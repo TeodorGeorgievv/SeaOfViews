@@ -1,0 +1,39 @@
+.heading {
+  font-size: 4.5em;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  margin-top: -4.5em;
+  left: 15%;
+}
+
+.description {
+  position: absolute;
+  text-align: center;
+  font-size: 1em;
+  margin-top: -12.5em;
+  color: #fff;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 30rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.header img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  transform: rotateZ(-4deg) translateY(-4rem) translateX(-1rem);
+}
+
+.label {
+  font-size: 2rem;
+  margin-top: 2em;
+  text-align: center;
+
+}
