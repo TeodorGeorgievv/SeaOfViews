@@ -21,7 +21,12 @@ const MainNavigation = () => {
       }}
       className={classes.header}
     >
-      <h1>Sea of Views</h1>
+      <NavLink
+        style={{ color: scroll ? "black" : "white", textDecoration: "none" }}
+        to="/"
+      >
+        <h1>Sea of Views</h1>
+      </NavLink>
       <nav style={{ color: scroll ? "" : "black" }} className={classes.nav}>
         <ul>
           <li>

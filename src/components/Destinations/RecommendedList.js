@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import CountryItem from "./CountryItem";
+import { Link } from "react-router-dom";
+import RecommendedCountryItem from "./RecommendedCountryItem";
 import classes from "./RecommendedList.module.css";
 
 const RecommendedList = (props) => {
@@ -29,13 +30,15 @@ const RecommendedList = (props) => {
   }, []);
 
   const countriesList = countryData.map((country) => (
-    <CountryItem
-      key={country.id}
-      id={country.id}
-      name={country.name}
-      image={country.image}
-      description={country.description}
-    />
+    <Link style={{textDecoration: "none", color: 'black'}} to={`/travel/${country.name.toLowerCase()}`}>
+      <RecommendedCountryItem
+        key={country.id}
+        id={country.id}
+        name={country.name}
+        image={country.image}
+        description={country.description}
+      />
+    </Link>
   ));
 
   return (
