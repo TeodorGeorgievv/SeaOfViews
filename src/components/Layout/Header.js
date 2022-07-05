@@ -6,15 +6,15 @@ const Header = (props) => {
     <Fragment>
       <div className={classes.header}>
         <img src={props.mainHeader} alt={props.heading} />
-        <h1 className={classes.heading}>{props.heading}</h1>
-        <p className={classes.description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          perferendis maxime eveniet fugiat consequuntur dolores quo porro
-          minus! Deleniti, ipsa.
-        </p>
+        <div className={classes.headingWrap}>
+          <h1 className={classes.heading}>{props.heading}</h1>
+          <p className={classes.description}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+            perferendis maxime eveniet fugiat consequuntur dolores quo porro
+            minus! Deleniti, ipsa.
+          </p>
+        </div>
       </div>
-      
-      <h2 className={classes.label}>{props.label}</h2>
     </Fragment>
   );
 };

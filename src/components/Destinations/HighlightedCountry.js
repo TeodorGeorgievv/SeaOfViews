@@ -1,13 +1,14 @@
 import { Fragment } from "react";
 import { Parallax } from "react-parallax";
-
 import classes from "./HighlightedCountry.module.css";
 import DestinationArticle from "./DestinationArticle/DestinationArticle";
+import DestinationArticleReversed from "./DestinationArticle/DestinationArticleReversed";
 
 const HighlightedCountry = (props) => {
+
   return (
     <Fragment>
-      <Parallax bgImage={props.image} strength={400}>
+      <Parallax bgImage={props.headImage} strength={400}>
         <div style={{ width: "500px", height: "46rem" }}></div>
       </Parallax>
       <div className={classes.country}>
@@ -45,7 +46,16 @@ const HighlightedCountry = (props) => {
           praesentium explicabo nostrum.
         </p>
 
-        <DestinationArticle />
+        <DestinationArticle
+          heading={props.description}
+          location={props.firstArticleHeading}
+          image={props.firstArticleImage}
+        />
+        <DestinationArticleReversed
+          heading={props.description}
+          location={props.secondArticleHeading}
+          image={props.secondArticleImage}
+        />
       </div>
     </Fragment>
   );

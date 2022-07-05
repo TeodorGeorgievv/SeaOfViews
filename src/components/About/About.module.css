@@ -1,0 +1,46 @@
+.about {
+  padding: 9.5rem;
+  display: grid;
+  gap: 4rem;
+  margin-top: -10rem;
+}
+
+.about p {
+  line-height: 2;
+}
+
+.button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #00a651;
+  color: #f2f2f2;
+  padding: 0.8rem 2rem;
+}
+
+.button:hover,
+.button:active {
+  background-color: rgb(20, 71, 45);
+}
+
+.about img {
+  width: 100%;
+  max-width: 35rem;
+  overflow: hidden;
+  height: 80%;
+}
+
+@media (min-width: 40em) {
+  .about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

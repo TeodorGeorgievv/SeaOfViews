@@ -1,11 +1,8 @@
 import classes from "./DestinationArticle.module.css";
 
-const DestinationArticle = (props) => {
+const DestinationArticleReversed = (props) => {
   return (
     <section className={classes.articleWrapper}>
-      <figure className={classes.imageWrapper}>
-        <img src={props.image} alt={props.heading} />
-      </figure>
       <div className={classes.text}>
         <span>/ {props.location}</span>
         <p>
@@ -13,8 +10,11 @@ const DestinationArticle = (props) => {
           aut, deserunt excepturi adipisci placeat.
         </p>
       </div>
+      <figure className={classes.imageWrapper}>
+        <img src={props.image} alt={props.heading} />
+      </figure>
     </section>
   );
 };
 
-export default DestinationArticle;
+export default DestinationArticleReversed;

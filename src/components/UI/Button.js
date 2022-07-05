@@ -1,7 +1,11 @@
 import classes from "./Button.module.css";
 
 const Button = (props) => {
-  return <button className={classes.button}>{props.title}</button>;
+  return (
+    <div className={classes['button-wrap']}>
+      <button className={classes.button}>{props.title}</button>;
+    </div>
+  );
 };
 
 export default Button;

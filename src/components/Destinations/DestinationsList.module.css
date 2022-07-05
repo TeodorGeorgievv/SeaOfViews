@@ -32,23 +32,3 @@
   color: #2c292b;
 }
 
-.content p {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 1.25rem;
-}
-
-.content button {
-  border: none;
-  color: #fff;
-  background-color: #00a651;
-  border-radius: 7px;
-  padding: 0.8rem 1.8rem;
-  font-size: 1.2em;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.content button:hover {
-  background-color: #024e27;
-}

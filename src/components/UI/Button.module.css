@@ -2,19 +2,19 @@
     cursor: pointer;
     font: inherit;
     font-size: 1.8em;
+    font-weight: bold;
     border: none;
     background-color: #00A651;
     color: white;
     padding: 1.2rem 2.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     border-radius: 10px;
-    font-weight: bold;
-    position: absolute;
-    margin-top: -8em;
-    left: 41.5%;
   }
+
+  .button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
   
   .button:hover,
   .button:active {

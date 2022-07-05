@@ -4,7 +4,11 @@
   color: #fff;
   position: absolute;
   margin-top: -4.5em;
-  left: 15%;
+}
+
+.headingWrap {
+  display: flex;
+  justify-content: center;
 }
 
 .description {
@@ -13,8 +17,9 @@
   font-size: 1em;
   margin-top: -12.5em;
   color: #fff;
-  width: 100%;
+  width: 50%;
 }
+
 
 .header {
   width: 100%;
@@ -28,12 +33,12 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(70%);
-  transform: rotateZ(-4deg) translateY(-4rem) translateX(-1rem);
+  transform: rotateZ(-4deg) translateY(-6rem) translateX(-2rem);
+
 }
 
-.label {
-  font-size: 2rem;
-  margin-top: 2em;
-  text-align: center;
 
+.homeButton {
+  margin-top: -8em;
+  left: 41.5%;
 }

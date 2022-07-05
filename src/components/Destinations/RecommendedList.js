@@ -40,7 +40,10 @@ const RecommendedList = (props) => {
 
   return (
     <section className={classes.countries}>
-        <ul>{countriesList}</ul>
+      <div className={classes.labelWrap}>
+        <h2 className={classes.label}>{props.label}</h2>
+      </div>
+      <ul>{countriesList}</ul>
     </section>
   );
 };

@@ -44,7 +44,7 @@ const Stats = () => {
       />
       <div className={classes.card}>
         {DUMMY_DATA.map((user) => (
-          <Card>
+          <Card key={user.id}>
             <div className={classes.image}>
               <img src={user.image} alt={user.name} />
             </div>

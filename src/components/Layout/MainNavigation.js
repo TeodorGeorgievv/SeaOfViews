@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import classes from "./MainNavigation.module.css";
 import { NavLink } from "react-router-dom";
+import SearchBar from "../UI/SearchBar";
+import BookData from "../../Data.json";
 
 const MainNavigation = () => {
   const [scroll, setScroll] = useState(false);
@@ -19,14 +21,14 @@ const MainNavigation = () => {
       }}
       className={classes.header}
     >
-      <h1>Travel Inspo</h1>
-      <nav style={{ color: scroll ? "red" : "black" }} className={classes.nav}>
+      <h1>Sea of Views</h1>
+      <nav style={{ color: scroll ? "" : "black" }} className={classes.nav}>
         <ul>
           <li>
-            <NavLink
-              activeClassName={classes.active}
-              to="/home"
-            >
+            <SearchBar placeholder="Enter a country" data={BookData} />
+          </li>
+          <li>
+            <NavLink activeClassName={classes.active} to="/home">
               Home
             </NavLink>
           </li>
@@ -39,6 +41,15 @@ const MainNavigation = () => {
             <NavLink activeClassName={classes.active} to="/travel">
               Travel
             </NavLink>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/seaofviews/"
+            >
+              <i className={"fa-brands fa-instagram"}></i>
+            </a>
           </li>
         </ul>
       </nav>

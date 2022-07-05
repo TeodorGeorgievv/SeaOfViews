@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import Card from "../UI/Card";
 
@@ -7,99 +7,61 @@ import classes from "./DestinationsList.module.css";
 // import required modules
 
 const DestinationsList = () => {
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-
   const DUMMY_DATA = [
     {
-      id: 'reykjavik',
+      id: "iceland",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Church_of_light.jpg/1024px-Church_of_light.jpg",
-      name: "Reykjavik, Iceland",
+      name: "Iceland",
       testimonial: "Years of Insipiring Travelers",
     },
     {
-      id: 'zermatt',
+      id: "switzerland",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Zermatt_-_Mattervispa_und_Matterhorn.jpg/1024px-Zermatt_-_Mattervispa_und_Matterhorn.jpg",
-      name: "Zermatt, Switzerland",
+      name: "Switzerland",
       testimonial: "Happy Travellers",
     },
     {
-      id: 'paris',
+      id: "france",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/1024px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
-      name: "Paris, France",
+      name: "France",
       testimonial: "Places Featured",
     },
     {
-      id: 'barcelona',
+      id: "spain",
       image:
         "https://i.postimg.cc/1zwL09RN/logan-armstrong-h-Vhfqh-DYci-U-unsplash.jpg",
-      name: "Barcelona, Spain",
+      name: "Spain",
       testimonial: "Travel History",
     },
     {
-      id: 'maldives',
-      image:
-        "https://i.postimg.cc/VL2GK3V9/rayyu-maldives-x-Ps-FXsb-XJRg-unsplash.jpg",
-      name: "Maldives",
-      testimonial: "Years of Insipiring Travelers",
-    },
-    {
-      id: 'sydney',
-      image:
-        "https://i.postimg.cc/wMmJNgD0/dan-freeman-7-Zb7k-Uy-Qg1-E-unsplash.jpg",
-      name: "Sydney, Australia",
-      testimonial: "Happy Travellers",
-    },
-    {
-      id: 'positano',
+      id: "italy",
       image:
         "https://i.postimg.cc/cLsgxQkD/jordan-steranka-z0-L0mo-9bg-unsplash.jpg",
-      name: "Positano, Italy",
+      name: "Italy",
       testimonial: "Places Featured",
     },
     {
-      id: 'kenya',
-      image:
-        "https://i.postimg.cc/Y9ww7xb0/craig-stevenson-gf3-v7-Pmp7-M-unsplash.jpg",
-      name: "Kenya",
-      testimonial: "Travel History",
-    },
-    {
-      id: 'cappadocia',
+      id: "turkey",
       image:
         "https://i.postimg.cc/SK6v6bfQ/mehmet-turgut-kirkgoz-0-ASU0-LSWp6g-unsplash.jpg",
-      name: "Cappadocia, Turkey",
+      name: "Turkey",
       testimonial: "Years of Insipiring Travelers",
     },
     {
-      id: 'grandcanyon',
+      id: "usa",
       image:
         "https://i.postimg.cc/MTRVMz7t/ganapathy-kumar-L75-D18a-Val8-unsplash.jpg",
-      name: "Grand Canyon, USA",
+      name: "USA",
       testimonial: "Happy Travellers",
     },
     {
-      id: 'patagonia',
-      image:
-        "https://i.postimg.cc/vT4RLSmP/hans-jurgen-weinhardt-5-RFMPuf-TKPA-unsplash.jpg",
-      name: "Patagonia, Argentina",
-      testimonial: "Places Featured",
-    },
-    {
-      id: 'beijing',
+      id: "china",
       image:
         "https://i.postimg.cc/xCyGp0X8/william-olivieri-vh-KZv-NFmp-PU-unsplash.jpg",
-      name: "Beijing, China",
+      name: "China",
       testimonial: "Travel History",
     },
   ];
@@ -108,21 +70,21 @@ const DestinationsList = () => {
     <Fragment>
       <div className={classes.wrapper}>
         {DUMMY_DATA.map((user) => (
-          <div className={classes.card}>
+          <div key={user.id} className={classes.card}>
             <Card>
-              <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-                <div className={classes.image}>
-                  <img src={user.image} alt={user.name} />
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/travel/${user.id}`}
+              >
+                <div>
+                  <div className={classes.image}>
+                    <img src={user.image} alt={user.name} />
+                  </div>
+                  <div className={classes.content}>
+                    <h3>{user.name}</h3>
+                  </div>
                 </div>
-                <div className={classes.content}>
-                  <h3>{user.name}</h3>
-                  {isHovering && (
-                    <Link to={`/travel/${user.id}`}>
-                      <button>Read more</button>
-                    </Link>
-                  )}
-                </div>
-              </div>
+              </Link>
             </Card>
           </div>
         ))}

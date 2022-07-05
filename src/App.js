@@ -2,14 +2,16 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import About from "./pages/About";
+import AboutPage from "./pages/AboutPage";
 import Travel from "./pages/Travel";
 import CountryDetail from "./pages/CountryDetail";
 import Layout from "./components/Layout/Layout";
+import ScrollToTop from './components/UI/ScrollToTop';
 
 function App() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" exact>
           <Redirect to="/home" />
@@ -24,7 +26,7 @@ function App() {
           <HomePage />;
         </Route>
         <Route path="/about">
-          <About />;
+          <AboutPage />;
         </Route>
       </Switch>
     </Layout>

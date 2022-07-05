@@ -11,12 +11,11 @@ const HomePage = () => {
       <Header
         mainHeader="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Vinci%2C_Tuscany_05.08.2012.jpg/1280px-Vinci%2C_Tuscany_05.08.2012.jpg"
         heading="Inspiration for your next travel"
-        label="Editor's recommendations"
       />
-      <Link to="/travel">
+      <Link style={{ textDecoration: "none" }} to="/travel">
         <Button title="Discover more" />
       </Link>
-      <RecommendedList />
+      <RecommendedList label="Editor's recommendations" />
       <Stats />
     </Fragment>
   );
